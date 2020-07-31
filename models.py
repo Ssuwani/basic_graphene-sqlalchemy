@@ -12,6 +12,7 @@ class User(Base):
     username = Column(String, unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)
     password = Column(String, nullable=False)
+    like_list = Column(list)
 
     def __init__(self, username, email, password, **kwargs):
         self.username = username
